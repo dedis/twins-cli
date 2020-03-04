@@ -6,13 +6,13 @@
   "bin": {
     "researchercli": "./bin/run"
   },
-  "bugs": "https://github.com/gnarula/researchercli/issues",
+  "bugs": "https://github.com/dedis/twins-cli/issues",
   "dependencies": {
-    "@dedis/cothority": "file:///Users/narula/dev/cothority/external/js/cothority/dist",
+    "@dedis/cothority": "../cothority/external/js/cothority/dist",
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
-    "aries-framework-javascript": "file:///Users/narula/dev/twins/aries-framework-javascript/aries-framework-javascript-v1.0.3.tgz",
+    "aries-framework-javascript": "../aries-framework-javascript/aries-framework-javascript-v1.0.3.tgz",
     "indy-sdk": "^1.14.2",
     "node-fetch": "^2.6.0",
     "qrcode": "^1.4.4",
@@ -39,7 +39,7 @@
     "/npm-shrinkwrap.json",
     "/oclif.manifest.json"
   ],
-  "homepage": "https://github.com/gnarula/researchercli",
+  "homepage": "https://github.com/dedis/twins-cli",
   "keywords": [
     "oclif"
   ],
@@ -52,7 +52,7 @@
       "@oclif/plugin-help"
     ]
   },
-  "repository": "gnarula/researchercli",
+  "repository": "dedis/twins-cli",
   "scripts": {
     "postpack": "rm -f oclif.manifest.json",
     "posttest": "eslint . --ext .ts --config .eslintrc",

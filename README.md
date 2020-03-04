@@ -18,7 +18,7 @@ The roster should be placed in `src/roster.ts`
 # Usage
 <!-- usage -->
 ```sh-session
-$ npm install
+$ yarn install
 $ ./bin/run COMMAND
 running command...
 $ ./bin/run (-v|--version|version)
