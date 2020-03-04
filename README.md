@@ -4,9 +4,17 @@ researchercli
 CLI to demonstrate a researcher&#39;s workflow in TWINS
 
 <!-- toc -->
+* [Configuration](#configuration)
 * [Usage](#usage)
 * [Commands](#commands)
 <!-- tocstop -->
+
+# Configuration
+<!-- configuration -->
+Configuration for the cli can be found at `src/config.ts`. Please edit it to match your environment before proceeding.
+
+The roster should be placed in `src/roster.ts`
+<!-- configurationstop -->
 # Usage
 <!-- usage -->
 ```sh-session
