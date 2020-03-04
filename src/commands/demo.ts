@@ -10,7 +10,7 @@ import { ConsentChallengeRequestHandler } from '../agent/handlers/consent/Consen
 import { MessageType as ConsentMessageType} from '../agent/protocols/consent/messages';
 import { ConsentResponseHandler } from '../agent/handlers/consent/ConsentResponseHandler';
 import * as kyber from '@dedis/kyber';
-import { publicDidSeed } from '../config';
+import { publicDidSeed, orgName, studyName } from '../config';
 
 const curve = kyber.curve.newCurve('edwards25519');
 
@@ -40,13 +40,9 @@ export default class Demo extends Command {
     // await indy.createPoolLedgerConfig('buildernet', poolConfig);
     const ph = await indy.openPoolLedger('buildernet');
 
-    console.log(`Connected to buildernet, pool handle: ${ph}`);
-
     const [did, verkey] = await agent.context.wallet.createDid({ seed: publicDidSeed, method_name: 'sov' })
     agent.context.wallet.publicDid = { did, verkey };
     console.log(`Public DID: ${did} created and stored in the wallet`);
-    // @ts-ignore
-    console.log(`Wallet Handle ${agent.context.wallet.wh}`);
 
     const consentService = new ConsentService(agent.context);
     const consentChallengeRequestHandler = new ConsentChallengeRequestHandler(consentService, agent.connectionService);
@@ -62,7 +58,8 @@ export default class Demo extends Command {
       agent.context.messageSender.sendMessage(consentService.requestConsent(
         connection,
         args.document_darc,
-        `Please provide consent to view data associated with ${args.document_darc}`
+        orgName,
+        studyName,
       ));
     });
   }

@@ -8,16 +8,18 @@ export enum MessageType {
 }
 
 export enum ConsentStatus {
+  UNDECIDED,
   DENIED,
   GRANTED,
 }
 
-export function createConsentRequest(documentDarc: string, message: string, publicDid: string) {
+export function createConsentRequest(documentDarc: string, orgName: string, studyName: string, publicDid: string) {
   return {
     '@id': uuid(),
     '@type': MessageType.ConsentRequest,
     documentDarc,
-    comment: message,
+    orgName,
+    studyName,
     publicDid,
   };
 }

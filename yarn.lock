@@ -26,7 +26,7 @@
     core-js "^2.6.5"
     regenerator-runtime "^0.13.2"
 
-"@dedis/cothority@file:///Users/narula/dev/cothority/external/js/cothority/dist":
+"@dedis/cothority@../cothority/external/js/cothority/dist":
   version "3.4.3"
   dependencies:
     "@babel/polyfill" "^7.2.5"
@@ -541,9 +541,9 @@ argparse@^1.0.7:
   dependencies:
     sprintf-js "~1.0.2"
 
-"aries-framework-javascript@file:../aries-framework-javascript/aries-framework-javascript-v1.0.3.tgz":
+aries-framework-javascript@../aries-framework-javascript/aries-framework-javascript-1.0.3.tgz:
   version "1.0.3"
-  resolved "file:../aries-framework-javascript/aries-framework-javascript-v1.0.3.tgz#10aaa1eeaea379da9b5bef3dfa3ab6dde6b8d5d8"
+  resolved "../aries-framework-javascript/aries-framework-javascript-1.0.3.tgz#f89025ce224d118a3891c989c80d909b710bfe1e"
   dependencies:
     "@types/express" "^4.17.0"
     await-poll "^1.0.2"

@@ -25,9 +25,9 @@ export class ConsentService {
     this.context = context;
   }
 
-  requestConsent(connection: Connection, documentDarc: string, message: string) {
+  requestConsent(connection: Connection, documentDarc: string, orgName: string, studyName: string) {
     const didInfo = this.context.wallet.getPublicDid() as DidInfo;
-    return createOutboundMessage(connection, createConsentRequest(documentDarc, message, didInfo.did));
+    return createOutboundMessage(connection, createConsentRequest(documentDarc, orgName, studyName, didInfo.did));
   }
 
   challengeResponse(connection: Connection, nonce: string) {

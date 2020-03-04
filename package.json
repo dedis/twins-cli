@@ -12,7 +12,7 @@
     "@oclif/command": "^1",
     "@oclif/config": "^1",
     "@oclif/plugin-help": "^2",
-    "aries-framework-javascript": "../aries-framework-javascript/aries-framework-javascript-v1.0.3.tgz",
+    "aries-framework-javascript": "../aries-framework-javascript/aries-framework-javascript-1.0.3.tgz",
     "indy-sdk": "^1.14.2",
     "node-fetch": "^2.6.0",
     "qrcode": "^1.4.4",
