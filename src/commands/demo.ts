@@ -14,10 +14,10 @@ import { publicDidSeed } from '../config';
 
 const curve = kyber.curve.newCurve('edwards25519');
 
-export default class Invite extends Command {
-  static description = "Renders an invitation as a QR Code";
+export default class Demo extends Command {
+  static description = "Renders an invitation as a QR Code and sends a consent request on successful connection";
 
-  static examples = ["$ researchercli invite"];
+  static examples = ["$ researchercli demo [DOCUMENT_DARC]"];
 
   static flags = {
     help: flags.help({ char: "h" }),
@@ -26,7 +26,7 @@ export default class Invite extends Command {
   static args = [{ name: "document_darc" }];
 
   async run() {
-    const { args, flags } = this.parse(Invite);
+    const { args, flags } = this.parse(Demo);
     await agent.init();
 
     // Connect to buildernet
